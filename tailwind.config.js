@@ -28,8 +28,10 @@ export default {
           700: '#97A18C',
           900: '#6A765E',
         },
-      
       },
+      fontFamily: {
+        Poppins: ['Poppins']
+      }
     },
   },
   plugins: [],
