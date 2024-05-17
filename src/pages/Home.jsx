@@ -1,8 +1,12 @@
-
+import Headline from "../components/LandingPage/HeadLine"
+import Information from "../components/LandingPage/Information"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Headline />
+      <Information />
+    </div>
   )
 }
 
