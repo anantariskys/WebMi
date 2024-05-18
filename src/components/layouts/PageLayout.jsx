@@ -3,7 +3,8 @@ import Navbar from "../Navbar"
 
 const PageLayout = ({children}) => {
   return (
-    <div className=" bg-primary-500 px-4 py-4 md:py-6 md:px-8 lg:px-12 lg:py-10 xl:px-20 font-Poppins">
+    // <div className=" bg-primary-500 px-4 py-4 md:py-6 md:px-8 lg:px-12 lg:py-10 xl:px-20 font-Poppins">
+    <div className=" bg-primary-500  mx-auto font-Poppins">
         <Navbar/>
         {children}
         <Footer/>

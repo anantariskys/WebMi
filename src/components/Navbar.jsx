@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between pb-10 items-center">
+    <nav>
+      <div className="flex justify-between pb-10 items-center  px-4 py-4 md:py-6 md:px-8 lg:px-12 lg:py-10 xl:px-20">
         <img src={isOpen ? Close : Ham} alt="icon" onClick={toggleMenu} className="md:hidden" />
         <div>
           <Logo />
@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#" onClick={toggleMenu}>Tentang Kami</a>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
