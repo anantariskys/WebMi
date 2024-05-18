@@ -3,3 +3,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 768px) {
+    .splide__slide.is-active {
+      z-index: 50;
+      transform: translateY(-32px);
+    }
+    .splide__pagination{
+        gap:4px !important;
+    }
+    .splide__pagination__page .is-active{
+        height: 16px;
+       
+    }
+    .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 36px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+        
+    }
+  }
+@media (max-width: 425px) {
+   
+    .splide__pagination{
+        gap:2px !important;
+    }
+    .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 24px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+
+    }
+  }

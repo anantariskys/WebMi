@@ -3,7 +3,7 @@ import headlineImage from "../../assets/image/laptop.svg"
 
 const Headline = () => {
     return (
-        <div className="flex flex-col items-center text-secondary-300 md:flex-row md:justify-between md:items-start md:mt-5 lg:mt-10">
+        <div className="flex flex-col container items-center px-4 py-4 md:py-6 md:px-8 lg:px-12 lg:py-10 xl:px-20 text-secondary-300 md:flex-row md:justify-between md:items-start md:mt-5 lg:mt-10">
             <img src={headlineImage} alt="image" className="w-64 mb-4 mt-2 md:order-2 md:w-80 xl:w-auto lg:w-96" />
             <div className="flex flex-col items-center text-center gap-4 xl:gap-7 md:order-1 md:items-start md:text-start">
                 <h1 className="text-2xl font-bold md:text-5xl lg:text-6xl xl:text-7xl sm:text-3xl">Mulai Bisnismu<br />Bersama Kami</h1>
