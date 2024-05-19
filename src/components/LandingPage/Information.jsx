@@ -4,7 +4,7 @@ import { information } from "../../assets/data/information"
 
 const Information = () => {
   return (
-    <section className="bg-secondary-300 mt-5 md:mt-12 xl:mt-20 relative mb-20 md:mb-32 lg:mb-40 xl:mb-64">
+    <section id="information" className="bg-secondary-300 mt-5 md:mt-12 xl:mt-20 relative mb-20 md:mb-32 lg:mb-40 xl:mb-64">
       <img src={wave} alt="image" className="w-screen absolute -translate-y-3/4" />
       <div className="relative flex flex-col items-center rounded-lg">
         <div className="border bg-primary-500 px-5 py-2 rounded-lg lg:mt-40 mt-20">

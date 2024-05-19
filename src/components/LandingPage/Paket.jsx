@@ -5,7 +5,7 @@ import { paket } from "../../assets/data/paket";
 
 const Paket = () => {
   return (
-    <section className="relative w-full h-fit bg-secondary-300 flex items-center">
+    <section id="paket" className="relative w-full h-fit bg-secondary-300 flex items-center">
       <img src={Wave} className="absolute top-0 -translate-y-1/4 z-10" draggable="false" alt="img-wave" />
       <div className="container mx-auto mt-32 md:mt-56 lg:mt-96 lg:px-20 xl:px-0  relative z-20">
         <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-10 lg:mt-20">Beli Paket Lebih Murah!</h2>
@@ -43,7 +43,6 @@ const Paket = () => {
               <SplideSlide className="md:pt-32 pt-12 pb-10 px-10 md:px-32 lg:px-0 duration-300 transition-transform" key={index}>
                 <CardPaket nama={item.nama} price={item.price} index={index} discount={item.discount} benefit={item.benefit} />
               </SplideSlide>
-
             ))
           }
         </Splide>

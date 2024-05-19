@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="bg-secondary-300 w-full pt-20 pb-28 md:pt-24 lg:pt-28 xl:pt-40">
+    <div id="contact" className="bg-secondary-300 w-full pt-20 pb-28 md:pt-24 lg:pt-28 xl:pt-40">
       <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-5 lg:mb-10 ">Cus, Pesan Sekarang!</h2>
       <main className="container mx-auto md:px-24 px-4 ">
         <div className="bg-secondary-900 p-4 md:p-10 rounded-xl">

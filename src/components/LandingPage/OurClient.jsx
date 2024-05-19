@@ -6,7 +6,7 @@ import { data2 } from "../../assets/data/data2";
 
 const OurClient = () => {
   return (
-    <section className="bg-secondary-300 ">
+    <section id="client" className="bg-secondary-300 ">
       <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-24">Klien Kami</h2>
       <div className=" bg-primary-500 relative ">
         <img src={WaveAtas} alt="wave" className="w-screen absolute z-10 -top-10 md:top-0 -translate-y-1/2" />
