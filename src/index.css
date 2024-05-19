@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 768px) {
+    .splide__slide.is-active {
+      z-index: 50;
+      transform: translateY(-32px);
+    }
+    .splide__pagination{
+        gap:4px !important;
+    }
+    .splide__pagination__page .is-active{
+        height: 16px;
+       
+    }
+    .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 36px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+        
+    }
+  }
+@media (max-width: 425px) {
+   
+    .splide__pagination{
+        gap:2px !important;
+    }
+    .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 24px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+
+    }
+  }
