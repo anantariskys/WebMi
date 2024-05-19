@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import check from "../assets/icon/check.svg";
-const CardPaket = ({ nama, price, discount, benefit, index }) => {
+
+const CardPaket = ({ nama, price, discount, benefit1, benefit2, benefit3, benefit4, index }) => {
   return (
     <div className={`${index%2==0?"lg:z-10 bg-secondary-900":"lg:-translate-y-20 lg:z-20 bg-primary-500"} w-full flex-col flex  aspect-[8/12] justify-between p-4 md:p-8 text-secondary-500  relative rounded-xl `}>
       <main className="flex flex-col items-center gap-2">
@@ -11,22 +12,23 @@ const CardPaket = ({ nama, price, discount, benefit, index }) => {
         <div className="flex flex-col gap-3 w-full text-base">
           <div className="flex justify-start gap-3 items-center ">
             <img src={check} className="md:w-auto w-[10%]"  alt="icon" draggable="false"/>
-            <p className="md:text-base text-sm">8 Halaman</p>
+            <p className="md:text-base text-sm">{benefit1}</p>
           </div>
           <div className="flex justify-start gap-3 items-center ">
             <img src={check} className="md:w-auto w-[10%]"  alt="icon" draggable="false"/>
-            <p className="md:text-base text-sm">8 Domain dan Hosting</p>
+            <p className="md:text-base text-sm">{benefit2}</p>
           </div>
           <div className="flex justify-start gap-3 items-center ">
             <img src={check} className="md:w-auto w-[10%]"  alt="icon" draggable="false"/>
-            <p className="md:text-base text-sm">1 Tahun perpanjangan website</p>
+            <p className="md:text-base text-sm">{benefit3}</p>
           </div>
           <div className="flex justify-start gap-3 items-center ">
             <img src={check} className="md:w-auto w-[10%]"  alt="icon" draggable="false"/>
-            <p className="md:text-base text-sm">8 Halaman</p>
+            <p className="md:text-base text-sm">{benefit4}</p>
           </div>
         </div>
       </main>
+      
       <motion.button
         whileTap={{
           scale: 0.95,

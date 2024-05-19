@@ -4,6 +4,7 @@ import CardPaket from "../CardPaket";
 import { paket } from "../../assets/data/paket";
 
 const Paket = () => {
+
   return (
     <section id="paket" className="relative w-full h-fit bg-secondary-300 flex items-center">
       <img src={Wave} className="absolute top-0 -translate-y-1/4 z-10" draggable="false" alt="img-wave" />
@@ -41,7 +42,8 @@ const Paket = () => {
           {
             paket.map((item, index) => (
               <SplideSlide className="md:pt-32 pt-12 pb-10 px-10 md:px-32 lg:px-0 duration-300 transition-transform" key={index}>
-                <CardPaket nama={item.nama} price={item.price} index={index} discount={item.discount} benefit={item.benefit} />
+                <CardPaket nama={item.nama} price={item.price} index={index} discount={item.discount} benefit1={item.benefit1}
+                  benefit2={item.benefit2} benefit3={item.benefit3} benefit4={item.benefit4} />
               </SplideSlide>
             ))
           }
