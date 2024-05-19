@@ -2,10 +2,14 @@ import React from "react";
 import bubble from "../../assets/image/bubble.png";
 import send from "../../assets/icon/send.svg";
 import { motion } from "framer-motion";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+
 const Contact = () => {
   return (
-    <div className="bg-secondary-300 w-full lg:h-screen py-20">
-      <h2 className="text-primary-500 font-bold text-2xl md:text-5xl w-fit mx-auto mb-5 lg:mb-10 ">Cus, Pesan Sekarang!</h2>
+    <div id="contact" className="bg-secondary-300 w-full pt-20 pb-28 md:pt-24 lg:pt-28 xl:pt-40">
+      <Parallax speed={8}>
+        <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-5 lg:mb-10 ">Cus, Pesan Sekarang!</h2>
+      </Parallax>
       <main className="container mx-auto md:px-24 px-4 ">
         <div className="bg-secondary-900 p-4 md:p-10 rounded-xl">
           <div className="w-full bg-secondary-300 p-4 md:p-10 rounded-xl">
@@ -24,14 +28,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-center">
-          <motion.button
-        whileTap={{
-          scale: 0.95,
-        }}
-        className="bg-primary-500 text-secondary-50 w-3/5 text-sm md:text-2xl font-semibold  py-1  lg:py-3 rounded-2xl mx-auto mt-4 md:mt-10"
-      >
-        Chat
-      </motion.button>
+            <motion.button
+              whileTap={{
+                scale: 0.95,
+              }}
+              className="bg-primary-500 text-secondary-50 w-3/5 text-xs md:text-xl lg:text-2xl font-semibold  py-1  lg:py-3 rounded-2xl mx-auto mt-4 md:mt-10"
+            >
+              Chat
+            </motion.button>
           </div>
 
         </div>
@@ -40,4 +44,12 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+const App = () => {
+  return (
+    <ParallaxProvider>
+      <Contact />
+    </ParallaxProvider>
+  );
+}
+
+export default App;
