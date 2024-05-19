@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Wave from "../../assets/image/waveBawah.png";
 import CardPaket from "../CardPaket";
 import { paket } from "../../assets/data/paket";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 const Paket = () => {
 
@@ -9,7 +10,9 @@ const Paket = () => {
     <section id="paket" className="relative w-full h-fit bg-secondary-300 flex items-center">
       <img src={Wave} className="absolute top-0 -translate-y-1/4 z-10" draggable="false" alt="img-wave" />
       <div className="container mx-auto mt-32 md:mt-56 lg:mt-96 lg:px-20 xl:px-0  relative z-20">
-        <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-10 lg:mt-20">Beli Paket Lebih Murah!</h2>
+        <Parallax speed={10}>
+          <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-10 lg:mt-20">Beli Paket Lebih Murah!</h2>
+        </Parallax>
         <Splide
           options={{
             arrows: false,
@@ -53,4 +56,12 @@ const Paket = () => {
   );
 };
 
-export default Paket;
+const App = () => {
+  return (
+    <ParallaxProvider>
+      <Paket />
+    </ParallaxProvider>
+  );
+}
+
+export default App;
