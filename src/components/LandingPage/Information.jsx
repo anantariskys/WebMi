@@ -1,9 +1,10 @@
-
-
 const Information = () => {
-    return (
-      <div>Information</div>
-    )
-  }
-  
-  export default Information
+  return (
+    <div className="">
+      
+      Information
+    </div>
+  )
+}
+
+export default Information
