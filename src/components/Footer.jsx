@@ -1,15 +1,25 @@
 import Logo from "../assets/Logo";
 import waveFooter from "../assets/image/waveFooter.png";
 import sosmed from "../assets/icon/sosmed.svg";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer className="bg-primary-300 mt-56 pb-20">
       <img src={waveFooter} alt="image" className="w-screen -translate-y-1/2 " />
       <div className="px-24 xl:px-40 lg:px-32 flex flex-col items-center text-center text-secondary-300 md:-mt-40 md:relative xl:-mt-60">
-        <div className="border bg-primary-500 rounded-lg border-primary-500 py-2 md:self-end px-4">
+        <motion.div 
+         animate={
+          {
+            scale:[1,1.02,0.99,1]
+          }
+        }
+        transition={{
+          repeat:Infinity
+        }}
+        className="border bg-primary-500 rounded-lg border-primary-500 py-2 md:self-end px-4">
           <Logo />
-        </div>
+        </motion.div>
         <ul className="flex flex-col items-center md:flex-row md:justify-between mt-8 w-full">
           <li>
             <img src={sosmed} alt="icon" className="w-40 hidden md:block lg:w-full" />

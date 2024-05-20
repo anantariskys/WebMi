@@ -2,15 +2,14 @@ import React from "react";
 import bubble from "../../assets/image/bubble.png";
 import send from "../../assets/icon/send.svg";
 import { motion } from "framer-motion";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import TitleSection from "../TitleSection";
 
 const Contact = () => {
   return (
     <div id="contact" className="bg-secondary-300 w-full pt-20 pb-28 md:pt-24 lg:pt-28 xl:pt-40">
-      <Parallax speed={8}>
-        <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-5 lg:mb-10 ">Cus, Pesan Sekarang!</h2>
-      </Parallax>
-      <main className="container mx-auto md:px-24 px-4 ">
+   
+      <TitleSection className="mb-5 lg:mb-10">Cus, Pesan Sekarang!</TitleSection>
+      <main className="container mx-auto md:px-24 px-4 relative z-20 ">
         <div className="bg-secondary-900 p-4 md:p-10 rounded-xl">
           <div className="w-full bg-secondary-300 p-4 md:p-10 rounded-xl">
             <img src={bubble} className="md:w-2/5 w-3/4 mb-32" alt="img-bubble" draggable="false" />
@@ -44,12 +43,6 @@ const Contact = () => {
   );
 };
 
-const App = () => {
-  return (
-    <ParallaxProvider>
-      <Contact />
-    </ParallaxProvider>
-  );
-}
 
-export default App;
+
+export default Contact;

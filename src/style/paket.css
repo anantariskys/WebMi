@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+   #paket .splide__slide.is-active {
+      z-index: 50;
+      transform: translateY(-32px);
+    }
+    #paket .splide__pagination{
+        gap:4px !important;
+    }
+    #paket .splide__pagination__page .is-active{
+        height: 16px;
+       
+    }
+    #paket .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 36px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+        
+    }
+  }
+@media (max-width: 425px) {
+   
+    #paket .splide__pagination{
+        gap:2px !important;
+    }
+    #paket .splide__pagination__page {
+        background-color: #303030  !important;
+        width: 24px !important;
+        height: 4px !important;
+        border-radius: 10px !important;
+
+    }
+  }

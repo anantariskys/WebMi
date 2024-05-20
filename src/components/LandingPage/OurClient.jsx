@@ -1,72 +1,88 @@
-import { motion } from "framer-motion";
-import React from "react";
 import WaveAtas from "../../assets/image/waveAtas.png";
 import { data1 } from "../../assets/data/data1";
 import { data2 } from "../../assets/data/data2";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import TitleSection from "../TitleSection";
 
 const OurClient = () => {
   return (
-    <section id="client" className="bg-secondary-300 ">
-      <h2 className="text-primary-500 font-bold text-base md:text-3xl xl:text-5xl lg:text-4xl w-fit mx-auto mb-24">Klien Kami</h2>
-      <div className=" bg-primary-500 relative ">
+    <section  id="client" className="bg-secondary-300 ">
+      <TitleSection className="mb-24">Klien Kami</TitleSection>
+      <div className=" bg-primary-500 relative  ">
         <img src={WaveAtas} alt="wave" className="w-screen absolute z-10 -top-10 md:top-0 -translate-y-1/2" />
+        <div className="flex flex-col  w-full justify-center gap-4 lg:gap-16  md:pt-24">
+          <Splide
+            options={{
+              pagination: false,
+              arrows:false,
+              breakpoints: {
+                728: {
+                  perPage: 1,
+                  gap:8,
+                },
+                4000: {
+                  gap:24,
+                  perPage: 3,
+                },
+              },
+              perMove:1,
+              autoplay:true,
+              rewind:true,
+              interval:2000
+              
 
-        <div className="overflow-hidden flex flex-col gap-10 w-full md:py-32 py-16 pb-10">
-          <motion.div
-            animate={{
-              x: [0, "-50%",],
             }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear"
-            }}
-
-
-            className={`flex md:w-[200vw] w-[600vw]   relative z-30    `}>
+            className="relative z-40"
+          >
             {data1.map((i, index) => (
-              <div className="aspect-[16/10] w-full ">
-                <div key={index} className="w-4/5 xl:w-fit h-fit aspect-[16/10] bg-secondary-700 group shadow-2xl rounded-b-xl">
-                  <div className="overflow-hidden w-full aspect-[16/10]  ">
-                    <img src={i.img}
-                      draggable="false"
-                      className=" object-cover duration-200 ease-in-out group-hover:scale-105 group-hover:rotate-1 "
-                      alt="img" />
+              <SplideSlide key={index} className="px-10 md:px-4 sm:px-8  flex items-center h-fit">
+                <div className="w-full h-full   bg-secondary-700 group shadow-2xl rounded-xl">
+                  <div className="overflow-hidden w-full aspect-video  ">
+                    <img src={i.img} draggable="false" className="w-full object-cover duration-200 ease-in-out group-hover:scale-105 group-hover:rotate-1 " alt="img" />
                   </div>
                   <h3 className="text-sm font-semibold text-center py-2 lg:py-5 text-secondary-300 xl:text-2xl">{i.title}</h3>
                 </div>
-              </div>
+              </SplideSlide>
             ))}
-          </motion.div>
-          <motion.div
-            animate={{
-              x: ["-50%", 0],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear"
-            }}
+          </Splide>
+          <Splide
+            options={{
+              pagination: false,
+              arrows:false,
+              breakpoints: {
+                728: {
+                  perPage: 1,
+                  gap:8,
+                },
+                4000: {
+                  gap:24,
+                  perPage: 3,
+                },
+              },
+              perMove:1,
+              autoplay:true,
+              rewind:true,
+              interval:2000,
+              direction:"rtl"
+              
 
-
-            className={`flex md:w-[200vw] w-[600vw]   relative z-30    `}>
+            }}
+            className="relative z-40 md:block hidden"
+          >
             {data2.map((i, index) => (
-              <div className="aspect-[16/10] w-full ">
-                <div key={index} className=" w-4/5 xl:w-fit h-fit aspect-[16/10] bg-secondary-700 group shadow-xl rounded-b-xl">
-                  <div className="overflow-hidden w-full aspect-[16/10]  ">
-                    <img src={i.img}
-                      draggable="false"
-                      className=" object-cover  duration-200 ease-in-out group-hover:scale-105 group-hover:rotate-1"
-                      alt="img" />
-
+              <SplideSlide key={index} className="px-10 md:px-4 sm:px-8  flex items-center h-fit">
+                <div className="w-full h-full   bg-secondary-700 group shadow-2xl rounded-xl">
+                  <div className="overflow-hidden w-full aspect-video  ">
+                    <img src={i.img} draggable="false" className="w-full object-cover duration-200 ease-in-out group-hover:scale-105 group-hover:rotate-1 " alt="img" />
                   </div>
                   <h3 className="text-sm font-semibold text-center py-2 lg:py-5 text-secondary-300 xl:text-2xl">{i.title}</h3>
                 </div>
-              </div>
+              </SplideSlide>
             ))}
-          </motion.div>
-
+          </Splide>
+         
         </div>
+        
       </div>
     </section>
   );
